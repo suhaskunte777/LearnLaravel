@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Log;
 
 define('LARAVEL_START', microtime(true));
 
-print_r(["Level 1 :", LARAVEL_START]);
+print_r(["Step 01 : Defining LARAVEL START constant using microtime(true)", LARAVEL_START]);
 /*
 |--------------------------------------------------------------------------
 | Check If The Application Is Under Maintenance
@@ -22,7 +22,7 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
     require $maintenance;
 }
 
-print_r(["Level 2 :", $maintenance]);
+print_r(["Step 02 : Checking for maintenance mode using file_exists(__DIR__.'/../storage/framework/maintenance.php') also storing in \$maintenance", $maintenance]);
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ print_r(["Level 2 :", $maintenance]);
 | into the script here so we don't need to manually load our classes.
 |
 */
-print_r(["Level 3 :", "Auto Loader is called"]);
+print_r(["Step 03 : Composer auto loader file is called", "__DIR__.'/../vendor/autoload.php'"]);
 
 require __DIR__.'/../vendor/autoload.php';
 
